@@ -1,3 +1,5 @@
+// JavaFX Calculator Application
+
 package application;
 
 import javafx.application.Application;
