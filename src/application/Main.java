@@ -1,4 +1,5 @@
 // JavaFX Calculator Application
+// Skeleton Starter Code
 
 package application;
 
