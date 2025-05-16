@@ -46,37 +46,51 @@ To run the app locally:
 1. Clone the repository:
    ```bash
    git clone https://github.com/aso-repos/CalculatorJavaFX.git
-Open the project in IntelliJ IDEA
+   ```
 
-Configure JavaFX SDK in your VM options (if not already set):
+2. Open the project in IntelliJ IDEA
 
-cpp
-Copy
-Edit
---module-path "C:\Java\javafx-sdk-21\lib" --add-modules javafx.controls,javafx.fxml
-Run the Main.java file
-You should see a grey calculator window with your custom logo in the title bar.
+3. Configure JavaFX SDK in your VM options (if not already set):
+   ```
+   --module-path "C:\Java\javafx-sdk-21\lib" --add-modules javafx.controls,javafx.fxml
+   ```
 
-📸 Screenshots
+4. Run the `Main.java` file  
+   You should see a grey calculator window with your custom logo in the title bar.
+
+---
+
+## 📸 Screenshots
+
 Coming soon — layout under construction.
 
-🎓 Learning Context
+---
+
+## 🎓 Learning Context
+
 This project accompanies my JavaFX learning through:
 
-Bro Code’s JavaFX Course on YouTube
-
-Practical experiments mirrored in a separate repo: BroCourse
+- [Bro Code’s JavaFX Course on YouTube](https://www.youtube.com/playlist?list=PLZyvi_9gamL-EE3zQJbU5N6gPjKoT9yIG)
+- Practical experiments mirrored in a separate repo: [**BroCourse**](https://github.com/aso-repos/BroCourse)
 
 It reflects the transition from academic Java training into independently built applications — applying lessons from a full Java Specialization completed through Duke University & UC San Diego.
 
-📚 Related Projects
-BroCourse — JavaFX tutorial mirror project
+---
 
-Projects — Early Python desktop experiments
+## 📚 Related Projects
 
-📫 Contact
-For collaboration or feedback, feel free to connect via:
-LinkedIn – Wessel Wessels
+- [**BroCourse**](https://github.com/aso-repos/BroCourse) — JavaFX tutorial mirror project  
+- [**Projects**](https://github.com/aso-repos/Projects) — Early Python desktop experiments
 
-📄 License
+---
+
+## 📫 Contact
+
+For collaboration or feedback, feel free to connect via:  
+[**LinkedIn – Wessel Wessels**](https://www.linkedin.com/in/wessel-wessels-9113191a/)
+
+---
+
+## 📄 License
+
 Personal learning project — no license applied.
