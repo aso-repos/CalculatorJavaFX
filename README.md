@@ -1,49 +1,4 @@
 # 🧮 CalculatorJavaFX
-…all the way down to:
-
-shell
-Copy
-Edit
-## 📄 License
-Paste the entire thing into your README.md file in GitHub or IntelliJ.
-
-You don’t need to manually add any triple backticks (```), and you don’t need to add or remove any formatting. GitHub will automatically format everything like headers, emoji, and code blocks when it renders the markdown.
-
-Let me know when it’s up on your repo or if you’d like help adjusting it after reviewing the live result.
-
-
-
-
-
-
-You said:
-Everything looks good. Just those parts that were outside the grey code block, seems to be unformatted and the links not ctive
-
-
-ChatGPT said:
-Perfect — you’re absolutely right, and I can confirm:
-The issue with some parts (like “Related Projects,” “Contact,” “Learning Context,” etc.) appearing unformatted or with broken links is likely because:
-
-When copying the README from here into GitHub, only part of the markdown syntax (like headers and links) was interpreted properly
-
-Some text outside the gray code block may have been incompletely selected or misrendered when pasted
-
-✅ How to Fix It Quickly:
-Go to your repository on GitHub
-
-Open the README.md file and click ✏️ Edit
-
-Replace the entire contents with the latest full version (below)
-
-Click “Preview” to make sure the formatting looks right
-
-Then scroll down and click “Commit changes”
-
-🔁 Here is the final, fixed, copy-pasteable README.md with all formatting correct:
-md
-Copy
-Edit
-# 🧮 CalculatorJavaFX
 
 A clean, minimal desktop calculator built using Java and JavaFX.  
 This project combines my existing Java knowledge with new JavaFX skills to create a real-world application while building confidence in UI development, Git workflows, and desktop app structure.
