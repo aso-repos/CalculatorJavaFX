@@ -1,86 +1,68 @@
-🧮 CalculatorJavaFX
+# 🧮 CalculatorJavaFX
 
 A clean, retro-style desktop calculator built using Java and JavaFX, inspired by the Casio Personal M-1 calculator. This project bridges the gap between structured Java coursework and real-world GUI development — applying design, coding, and problem-solving skills into a fully functional, visually polished app.
 
-🎯 Project Overview
+## 🎯 Project Overview
+- Transition from academic Java training into desktop GUI development
+- Reinforce object-oriented principles and modular JavaFX design
+- Develop practical GitHub workflow and open-source portfolio experience
+- Showcase a retro calculator with precise UI, custom font, and LED-style glow effects
 
-Transition from academic Java training into desktop GUI development
+## ⚙️ Key Features
+- ✅ Custom-designed CalculatorDigits.ttf font
+- ✅ Decimal point manually spaced and aligned using FontForge
+- ✅ LED-style display glow effect with duplicate label + drop shadow
+- ✅ Accurate retro calculator layout using Scene Builder
+- ✅ Clean window with fixed dimensions and custom icon
+- ✅ GitHub-tracked learning and version control throughout
 
-Reinforce object-oriented principles and modular JavaFX design
+## 📐 Design Inspiration
+- Based on the Casio Personal M-1 calculator — a personal keepsake
+- All digits (0–9 and dot) were redrawn in CorelDRAW and converted to vector
+- Final font manually kerned and spaced in FontForge for 1:1 alignment
+- Display layered with StackPane for foreground + glow labels
+- LED glow achieved using subtle Gaussian dropshadow in CSS
 
-Develop practical GitHub workflow and open-source portfolio experience
+## 🔧 Technologies Used
+- Java 21 (Azul ZuluFX JDK)
+- JavaFX 21 (via GluonHQ SDK)
+- IntelliJ IDEA CE 2024.1
+- Scene Builder (for layout construction)
+- CorelDRAW + FontForge (custom font design)
+- Git & GitHub (version control and portfolio publishing)
 
-Showcase a retro calculator with precise UI, custom font, and LED-style glow effects
+## 🚀 How to Run
 
-⚙️ Key Features
+1. Clone the repository:
 
-✅ Custom-designed CalculatorDigits.ttf font
+   ```bash
+   git clone https://github.com/aso-repos/CalculatorJavaFX.git
+   ```
 
-✅ Decimal point manually spaced and aligned using FontForge
+2. Open the project in IntelliJ IDEA
 
-✅ LED-style display glow effect with duplicate label + drop shadow
+3. Configure JavaFX VM options:
 
-✅ Accurate retro calculator layout using Scene Builder
+   ```bash
+   --module-path "C:/Java/javafx-sdk-21/lib" --add-modules javafx.controls,javafx.fxml
+   ```
 
-✅ Clean window with fixed dimensions and custom icon
-
-✅ GitHub-tracked learning and version control throughout
-
-📐 Design Inspiration
-
-Based on the Casio Personal M-1 calculator — a personal keepsake
-
-All digits (0–9 and dot) were redrawn in CorelDRAW and converted to vector
-
-Final font manually kerned and spaced in FontForge for 1:1 alignment
-
-Display layered with StackPane for foreground + glow labels
-
-LED glow achieved using subtle Gaussian dropshadow in CSS
-
-🔧 Technologies Used
-
-Java 21 (Azul ZuluFX JDK)
-
-JavaFX 21 (via GluonHQ SDK)
-
-IntelliJ IDEA CE 2024.1
-
-Scene Builder (for layout construction)
-
-CorelDRAW + FontForge (custom font design)
-
-Git & GitHub (version control and portfolio publishing)
-
-🚀 How to Run
-
-Clone the repository:
-
-git clone https://github.com/aso-repos/CalculatorJavaFX.git
-
-Open the project in IntelliJ IDEA
-
-Configure JavaFX VM options:
-
---module-path "C:/Java/javafx-sdk-21/lib" --add-modules javafx.controls,javafx.fxml
-
-Run Main.java
+4. Run `Main.java`
 
 The calculator window will appear with LED-style display and turquoise digit glow.
 
-🖼️ Visual Showcase
+## 🖼️ Visual Showcase
 
-Original Calculator Reference
+- **Original Calculator Reference**  
+  ![Casio M-1](./images/calculator_reference.png)
+- **LED-style Glow in App**  
+  ![Digit Glow](./images/calculator_glow.png)
+- **Font Design Preview**  
+  ![Vector Digits](./images/custom_font_preview.png)
 
+## 🧱 Current Display Styling
 
-LED-style Glow in App
-
-
-Font Design Preview
-
-
-🧱 Current Display Styling
-
+```css
 .digit-display {
     -fx-font-family: "CalcFont";
     -fx-font-size: 24px;
@@ -93,48 +75,33 @@ Font Design Preview
     -fx-text-fill: #61faf8;
     -fx-effect: dropshadow(gaussian, #e7ffff, 43, 0.03, 0, 0);
 }
+```
 
-🛠️ Development Roadmap
+## 🛠️ Development Roadmap
+- ✅ Initial JavaFX calculator frame
+- ✅ Custom font creation and embedding
+- ✅ Digit/decimal alignment and glow overlay
+- ⬜ Interactive digit button input
+- ⬜ Add arithmetic operations (+, −, ×, ÷)
+- ⬜ Implement clear and backspace functionality
+- ⬜ Add keyboard support and button hover effects
+- ⬜ Integrate scientific and memory functions
 
-✅ Initial JavaFX calculator frame
-
-✅ Custom font creation and embedding
-
-✅ Digit/decimal alignment and glow overlay
-
-⬜ Interactive digit button input
-
-⬜ Add arithmetic operations (+, −, ×, ÷)
-
-⬜ Implement clear and backspace functionality
-
-⬜ Add keyboard support and button hover effects
-
-⬜ Integrate scientific and memory functions
-
-🎓 Learning Journey
-
+## 🎓 Learning Journey
 This project is a culmination of:
+- 📘 Java Specialization (Duke University / UC San Diego)
+- 🎥 Bro Code’s JavaFX YouTube series
+- 🛠️ Self-taught Git and open-source publishing
+- ✏️ Custom font creation using CorelDRAW and FontForge
 
-📘 Java Specialization (Duke University / UC San Diego)
+## 📚 Related Projects
+- 🔁 BroCourse – JavaFX tutorial mirror project
+- 🐍 Early Python UI Projects – Available in GitHub archive
 
-🎥 Bro Code’s JavaFX YouTube series
+## 👋 Contact
+**Wessel Wessels**  
+📫 LinkedIn *(insert your link)*  
+📁 GitHub: [aso-repos](https://github.com/aso-repos)
 
-🛠️ Self-taught Git and open-source publishing
-
-✏️ Custom font creation using CorelDRAW and FontForge
-
-📚 Related Projects
-
-🔁 BroCourse – JavaFX tutorial mirror project
-
-🐍 Early Python UI Projects – Available in GitHub archive
-
-👋 Contact
-
-Wessel Wessels📫 LinkedIn (insert link)📁 GitHub: aso-repos
-
-📄 License
-
+## 📄 License
 Personal learning project — no license applied. The custom font “CalculatorDigits” was created by Wessel and is intended for non-commercial use.
-
