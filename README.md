@@ -68,7 +68,7 @@ Calculator should appear with LED-style display and turquoise digit glow
 Feature	Screenshot
 Custom Font Display	(Coming soon)
 Decimal Point Alignment	(Coming soon)
-Glow Effect (LED)	(Coming soon)
+Glow Effect (LED-style)	(Coming soon)
 
 🧱 Current Display Styling
 css
@@ -112,18 +112,20 @@ Bro Code’s JavaFX YouTube series
 
 Self-taught Git and open-source publishing
 
-Custom font creation using vector tools and font editors
+Custom font creation using vector tools and FontForge
 
 📚 Related Projects
-BroCourse – JavaFX course mirror project
+BroCourse – JavaFX tutorial mirror project
 
 Early Python UI Projects – Available in GitHub archive
 
 👋 Contact
 📫 Wessel Wessels
+
 LinkedIn (replace this with your actual link)
+
 📁 GitHub: aso-repos
 
 📄 License
-Personal learning project — no license applied.
-Font “CalculatorDigits” designed by Wessel for non-commercial use.
+This is a personal learning project — no license applied.
+The custom font “CalculatorDigits” was created by Wessel and is intended for non-commercial use.
