@@ -1,79 +1,95 @@
-# 🧮 CalculatorJavaFX
+🧮 CalculatorJavaFX
 
-A clean, retro-style desktop calculator built using **Java** and **JavaFX**, inspired by the **Casio Personal M-1** calculator. This project bridges the gap between structured Java coursework and real-world GUI development — applying design, coding, and problem-solving skills into a fully functional, visually polished app.
+A clean, retro-style desktop calculator built using Java and JavaFX, inspired by the Casio Personal M-1 calculator. This project bridges the gap between structured Java coursework and real-world GUI development — applying design, coding, and problem-solving skills into a fully functional, visually polished app.
 
----
+🎯 Project Overview
 
-## 🎯 Project Overview
+CalculatorJavaFX is a milestone JavaFX application created to:
 
-**CalculatorJavaFX** is a milestone JavaFX application created to:
-- Transition from academic Java training into desktop GUI development
-- Reinforce object-oriented principles and modular JavaFX design
-- Develop practical GitHub workflow and open-source portfolio experience
-- Showcase a retro calculator with precise UI, custom font, and LED-style glow effects
+Transition from academic Java training into desktop GUI development
 
----
+Reinforce object-oriented principles and modular JavaFX design
 
-## ⚙️ Key Features
+Develop practical GitHub workflow and open-source portfolio experience
 
-✅ Custom-designed **CalculatorDigits.ttf** font  
-✅ Decimal point manually spaced and aligned using FontForge  
-✅ LED-style **display glow effect** with duplicate label + drop shadow  
-✅ Accurate retro calculator layout using Scene Builder  
-✅ Clean window with fixed dimensions and custom icon  
+Showcase a retro calculator with precise UI, custom font, and LED-style glow effects
+
+⚙️ Key Features
+
+✅ Custom-designed CalculatorDigits.ttf font
+
+✅ Decimal point manually spaced and aligned using FontForge
+
+✅ LED-style display glow effect with duplicate label + drop shadow
+
+✅ Accurate retro calculator layout using Scene Builder
+
+✅ Clean window with fixed dimensions and custom icon
+
 ✅ GitHub-tracked learning and version control throughout
 
----
+📐 Design Inspiration
 
-## 📐 Design Inspiration
+Based on the Casio Personal M-1 calculator — a personal keepsake
 
-- Based on the **Casio Personal M-1** calculator — a personal keepsake
-- All digits (0–9 and dot) were redrawn in CorelDRAW and converted to vector
-- Final font manually kerned and spaced in FontForge for 1:1 alignment
-- Display layered with StackPane for foreground + glow labels
-- LED glow achieved using subtle Gaussian `dropshadow` in CSS
+All digits (0–9 and dot) were redrawn in CorelDRAW and converted to vector
 
----
+Final font manually kerned and spaced in FontForge for 1:1 alignment
 
-## 🔧 Technologies Used
+Display layered with StackPane for foreground + glow labels
 
-- Java 21 (Azul ZuluFX JDK)
-- JavaFX 21 (via GluonHQ SDK)
-- IntelliJ IDEA CE 2024.1
-- Scene Builder (for layout construction)
-- CorelDRAW + FontForge (custom font design)
-- Git & GitHub (version control and portfolio publishing)
+LED glow achieved using subtle Gaussian dropshadow in CSS
 
----
+🔧 Technologies Used
 
-## 🚀 How to Run
+Java 21 (Azul ZuluFX JDK)
 
-1. Clone the repository:
+JavaFX 21 (via GluonHQ SDK)
 
-   ```bash
-   git clone https://github.com/aso-repos/CalculatorJavaFX.git
-Open in IntelliJ IDEA
+IntelliJ IDEA CE 2024.1
+
+Scene Builder (for layout construction)
+
+CorelDRAW + FontForge (custom font design)
+
+Git & GitHub (version control and portfolio publishing)
+
+🚀 How to Run
+
+Clone the repository:
+
+git clone https://github.com/aso-repos/CalculatorJavaFX.git
+
+Open the project in IntelliJ IDEA
 
 Configure JavaFX VM options:
 
-cpp
-Copy
-Edit
 --module-path "C:/Java/javafx-sdk-21/lib" --add-modules javafx.controls,javafx.fxml
+
 Run Main.java
 
-Calculator should appear with LED-style display and turquoise digit glow
+The calculator window will appear with LED-style display and turquoise digit glow.
 
 🖼️ Visual Showcase
-Feature	Screenshot
-Custom Font Display	(Coming soon)
-Decimal Point Alignment	(Coming soon)
-Glow Effect (LED-style)	(Coming soon)
+
+Feature
+
+Screenshot
+
+Custom Font Display
+
+(Coming soon)
+
+Decimal Point Alignment
+
+(Coming soon)
+
+Glow Effect (LED-style)
+
+(Coming soon)
 
 🧱 Current Display Styling
-css
-Copy
-Edit
+
 .digit-display {
     -fx-font-family: "CalcFont";
     -fx-font-size: 24px;
@@ -86,17 +102,27 @@ Edit
     -fx-text-fill: #61faf8;
     -fx-effect: dropshadow(gaussian, #e7ffff, 43, 0.03, 0, 0);
 }
+
 🛠️ Development Roadmap
+
 ✅ Initial JavaFX calculator frame
+
 ✅ Custom font creation and embedding
+
 ✅ Digit/decimal alignment and glow overlay
+
 ⬜ Interactive digit button input
+
 ⬜ Add arithmetic operations (+, −, ×, ÷)
+
 ⬜ Implement clear and backspace functionality
+
 ⬜ Add keyboard support and button hover effects
+
 ⬜ Integrate scientific and memory functions
 
 🎓 Learning Journey
+
 This project is a culmination of:
 
 📘 Java Specialization (Duke University / UC San Diego)
@@ -108,15 +134,15 @@ This project is a culmination of:
 ✏️ Custom font creation using CorelDRAW and FontForge
 
 📚 Related Projects
+
 🔁 BroCourse – JavaFX tutorial mirror project
 
 🐍 Early Python UI Projects – Available in GitHub archive
 
 👋 Contact
-Wessel Wessels
-📫 LinkedIn (replace with your actual link)
-📁 GitHub: aso-repos
+
+Wessel Wessels📫 LinkedIn (replace with your actual link)📁 GitHub: aso-repos
 
 📄 License
-Personal learning project — no license applied.
-The custom font “CalculatorDigits” was created by Wessel and is intended for non-commercial use.
+
+Personal learning project — no license applied.The custom font “CalculatorDigits” was created by Wessel and is intended for non-commercial use.
