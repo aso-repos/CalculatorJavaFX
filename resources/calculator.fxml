@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="392.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CalculatorView">
+   <children>
+      <ImageView fitHeight="670.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Calculator.png" />
+         </image>
+      </ImageView>
+      <AnchorPane centerShape="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="187.0" StackPane.alignment="TOP_CENTER">
+         <StackPane.margin>
+            <Insets top="222.0" />
+         </StackPane.margin>
+         <children>
+            <Label fx:id="digitGlowLabel" alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="186.0" styleClass="digit-glow" text="digitGlow">
+               <graphic>
+                  <Label fx:id="digitLabel" alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="186.0" styleClass="digit-display" text="Digits" />
+               </graphic></Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
