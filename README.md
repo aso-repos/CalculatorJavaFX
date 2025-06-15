@@ -87,45 +87,36 @@ Edit
     -fx-effect: dropshadow(gaussian, #e7ffff, 43, 0.03, 0, 0);
 }
 🛠️ Development Roadmap
- Initial JavaFX calculator frame
-
- Custom font creation and embedding
-
- Digit/decimal alignment and glow overlay
-
- Interactive digit button input
-
- Add arithmetic operations (+, −, ×, ÷)
-
- Implement clear and backspace functionality
-
- Add keyboard support and button hover effects
-
- Integrate scientific and memory functions
+✅ Initial JavaFX calculator frame
+✅ Custom font creation and embedding
+✅ Digit/decimal alignment and glow overlay
+⬜ Interactive digit button input
+⬜ Add arithmetic operations (+, −, ×, ÷)
+⬜ Implement clear and backspace functionality
+⬜ Add keyboard support and button hover effects
+⬜ Integrate scientific and memory functions
 
 🎓 Learning Journey
 This project is a culmination of:
 
-Java Specialization (Duke University / UC San Diego)
+📘 Java Specialization (Duke University / UC San Diego)
 
-Bro Code’s JavaFX YouTube series
+🎥 Bro Code’s JavaFX YouTube series
 
-Self-taught Git and open-source publishing
+🛠️ Self-taught Git and open-source publishing
 
-Custom font creation using vector tools and FontForge
+✏️ Custom font creation using CorelDRAW and FontForge
 
 📚 Related Projects
-BroCourse – JavaFX tutorial mirror project
+🔁 BroCourse – JavaFX tutorial mirror project
 
-Early Python UI Projects – Available in GitHub archive
+🐍 Early Python UI Projects – Available in GitHub archive
 
 👋 Contact
-📫 Wessel Wessels
-
-LinkedIn (replace this with your actual link)
-
+Wessel Wessels
+📫 LinkedIn (replace this with your actual link)
 📁 GitHub: aso-repos
 
 📄 License
-This is a personal learning project — no license applied.
-The custom font “CalculatorDigits” was created by Wessel and is intended for non-commercial use.
+Personal learning project — no license applied.
+The custom font “CalculatorDigits” was hand-crafted by Wessel and is intended for non-commercial use.
