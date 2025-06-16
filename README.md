@@ -59,6 +59,10 @@ The calculator window will appear with LED-style display and turquoise digit glo
   <img src="./images/calculator_glow.png" alt="LED-style Glow" width="45%">
 </p>
 
+- **Font Design Preview**  
+  ![Vector Digits](./images/custom_font_preview.png)
+
+
 
 ## 🧱 Current Display Styling
 
