@@ -51,14 +51,18 @@ A clean, retro-style desktop calculator built using Java and JavaFX, inspired by
 
 The calculator window will appear with LED-style display and turquoise digit glow.
 
-## 🖼️ Visual Showcase
+<h4>🖼️ Visual Showcase</h4>
 
-- **Original Calculator Reference**  
-  ![Casio M-1](./images/calculator_reference.png)
-- **LED-style Glow in App**  
-  ![Digit Glow](./images/calculator_glow.png)
+<p align="center">
+  <img src="./images/calculator_reference.png" alt="Original Calculator" width="45%">
+  &nbsp; &nbsp; &nbsp;
+  <img src="./images/calculator_glow.png" alt="LED-style Glow" width="45%">
+</p>
+
 - **Font Design Preview**  
   ![Vector Digits](./images/custom_font_preview.png)
+
+
 
 ## 🧱 Current Display Styling
 
