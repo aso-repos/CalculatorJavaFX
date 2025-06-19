@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -23,6 +24,140 @@
                <graphic>
                   <Label fx:id="digitLabel" alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="186.0" styleClass="digit-display" text="Digits" />
                </graphic></Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="sevenButton" alignment="CENTER" layoutX="51.0" layoutY="387.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="51.0" styleClass="calc-button" />
+            <Button fx:id="eightButton" alignment="CENTER" layoutX="131.5" layoutY="387.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="51.0" styleClass="calc-button" />
+            <Button fx:id="nineButton" alignment="CENTER" layoutX="212.0" layoutY="387.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="51.0" styleClass="calc-button" />
+            <Button fx:id="divideButton" alignment="CENTER" layoutX="292.7" layoutY="387.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="51.0" styleClass="calc-button" />
+            <Button fx:id="fourButton" alignment="CENTER" layoutX="51.0" layoutY="449.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="51.0" styleClass="calc-button" />
+            <Button fx:id="fiveButton" alignment="CENTER" layoutX="131.6" layoutY="449.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="51.0" styleClass="calc-button" />
+            <Button fx:id="sixButton" alignment="CENTER" layoutX="212.0" layoutY="449.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="51.0" styleClass="calc-button" />
+            <Button fx:id="multiplyButton" alignment="CENTER" layoutX="292.8" layoutY="449.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="51.0" styleClass="calc-button" />
+            <Button fx:id="oneButton" alignment="CENTER" layoutX="50.8" layoutY="511.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="51.0" styleClass="calc-button" />
+            <Button fx:id="twoButton" alignment="CENTER" layoutX="131.7" layoutY="511.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="51.0" styleClass="calc-button" />
+            <Button fx:id="threeButton" alignment="CENTER" layoutX="212.0" layoutY="511.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="51.0" styleClass="calc-button" />
+            <Button fx:id="minusButton" alignment="CENTER" layoutX="292.8" layoutY="511.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="51.0" styleClass="calc-button" />
+            <Button fx:id="zeroButton" alignment="CENTER" layoutX="51.0" layoutY="574.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="51.0" styleClass="calc-button" />
+            <Button fx:id="pointButton" alignment="CENTER" layoutX="132.0" layoutY="574.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="51.0" styleClass="calc-button" />
+            <Button fx:id="equalsButton" alignment="CENTER" layoutX="212.0" layoutY="574.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="51.0" styleClass="calc-button" />
+            <Button fx:id="plusButton" alignment="CENTER" layoutX="292.8" layoutY="574.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="51.0" styleClass="calc-button" />
+            <Button fx:id="acButton" alignment="CENTER" layoutX="47.5" layoutY="333.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="42.0" styleClass="orange-button" />
+            <Button fx:id="cButton1" alignment="CENTER" layoutX="112.0" layoutY="333.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="42.0" styleClass="dark-button" />
+            <Button fx:id="mrButton1" alignment="CENTER" layoutX="176.5" layoutY="333.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="42.0" styleClass="dark-button" />
+            <Button fx:id="squarerootButton" alignment="CENTER" layoutX="240.6" layoutY="333.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="42.0" styleClass="dark-button" />
+            <Button fx:id="percentButton" alignment="CENTER" layoutX="305.1" layoutY="333.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="42.0" styleClass="dark-button" />
+         </children>
+      </AnchorPane>
+      <AnchorPane mouseTransparent="true" prefHeight="200.0" prefWidth="200.0" styleClass="buttonfont-background">
+         <children>
+            <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="66.0" layoutY="399.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@seven.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="149.0" layoutY="398.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@eight.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="230.0" layoutY="398.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@nine.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="66.0" layoutY="460.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@four.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="149.0" layoutY="460.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@five.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="230.0" layoutY="460.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@six.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="310.0" layoutY="398.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@divide.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="311.0" layoutY="461.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@multiply.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="69.0" layoutY="523.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@one.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="149.0" layoutY="523.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@two.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="230.0" layoutY="523.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@three.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="310.0" layoutY="529.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@minus.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="66.0" layoutY="586.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@zero.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="11.0" fitWidth="6.0" layoutX="154.0" layoutY="590.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@point.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="11.0" fitWidth="19.0" layoutX="229.0" layoutY="587.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@equals.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="18.0" fitWidth="19.0" layoutX="310.0" layoutY="585.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@plus.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="11.0" fitWidth="34.0" layoutX="54.0" layoutY="341.5" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@allclear.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="11.0" fitWidth="34.0" layoutX="125.7" layoutY="341.5" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@clear.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="11.0" fitWidth="34.0" layoutX="184.0" layoutY="341.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@memoryclear.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="11.0" fitWidth="34.0" layoutX="254.0" layoutY="341.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@squareroot.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="11.0" fitWidth="34.0" layoutX="314.0" layoutY="341.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@percent.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>
