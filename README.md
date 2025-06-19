@@ -149,7 +149,7 @@ This project is a culmination of:
 
 ## 👋 Contact
 **Wessel Wessels**  
-📫 LinkedIn *(insert your link)*  
+📫 LinkedIn: https://www.linkedin.com/in/wessel-wessels-9113191a/  
 📁 GitHub: [aso-repos](https://github.com/aso-repos)
 
 ## 📄 License
