@@ -1,3 +1,9 @@
+/* Digital creation of vintage Casio M1 calculator.
+Use scan of original calculator as background.
+Buttons recreated in JavaFX Scene Builder with button logic, and PNG image as overlay to replicate original look.
+Display recreated with new font in FontForge, and layed out in Scene Builder, styled with external CSS file.
+ */
+
 package application;
 
 import javafx.application.Application;

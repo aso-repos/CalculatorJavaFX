@@ -1,3 +1,7 @@
+/* CSS file for Calculator Application layout.
+   Styling done for digital display and button look and behavior.
+*/
+
 .digit-display {
     -fx-font-family: "CalcFont";
     -fx-font-size: 24px;
