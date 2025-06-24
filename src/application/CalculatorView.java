@@ -64,7 +64,7 @@ public class CalculatorView implements Initializable {
 
     private String currentInput = "";
     private String initialDisplay = "0.";
-    private String operator = "";    // Holds operatyor value (+, -, X, / etc.).
+    private String operator = "";    // Holds operator value (+, -, X, / etc.).
     private double firstOperand = 0;   // Create double from first display string.
     private boolean isEnteringSecondOperand = false; // Sets the state for entering second value.
 
@@ -80,48 +80,28 @@ public class CalculatorView implements Initializable {
     @FXML
     public void oneClicked (ActionEvent event) {
 
-        if (currentInput.length() < 8) {
-            currentInput += "1";
-            digitLabel.setText(currentInput);
-            digitGlowLabel.setText(currentInput);
-        }
-
+        appendDigit("1");
         System.out.println("1");
     }
 
     @FXML
     public void twoClicked (ActionEvent event) {
 
-        if (currentInput.length() < 8) {
-            currentInput += "2";
-            digitLabel.setText(currentInput);
-            digitGlowLabel.setText(currentInput);
-        }
-
+        appendDigit("2");
         System.out.println("2");
     }
 
     @FXML
     public void threeClicked (ActionEvent event) {
 
-        if (currentInput.length() < 8) {
-            currentInput += "3";
-            digitLabel.setText(currentInput);
-            digitGlowLabel.setText(currentInput);
-        }
-
+        appendDigit("3");
         System.out.println("3");
     }
 
     @FXML
     public void fourClicked (ActionEvent event) {
 
-        if (currentInput.length() < 8) {
-            currentInput += "4";
-            digitLabel.setText(currentInput);
-            digitGlowLabel.setText(currentInput);
-        }
-
+        appendDigit("4");
         System.out.println("4");
 
     }
@@ -129,106 +109,81 @@ public class CalculatorView implements Initializable {
     @FXML
     public void fiveClicked (ActionEvent event) {
 
-        if (currentInput.length() < 8) {
-            currentInput += "5";
-            digitLabel.setText(currentInput);
-            digitGlowLabel.setText(currentInput);
-        }
-
+        appendDigit("5");
         System.out.println("5");
     }
 
     @FXML
     public void sixClicked (ActionEvent event) {
 
-        if (currentInput.length() < 8) {
-            currentInput += "6";
-            digitLabel.setText(currentInput);
-            digitGlowLabel.setText(currentInput);
-        }
-
+        appendDigit("6");
         System.out.println("6");
     }
 
     @FXML
     public void sevenClicked (ActionEvent event) {
 
-        if (currentInput.length() < 8) {
-            currentInput += "7";
-            digitLabel.setText(currentInput);
-            digitGlowLabel.setText(currentInput);
-        }
-
+        appendDigit("7");
         System.out.println("7");
     }
 
     @FXML
     public void eightClicked (ActionEvent event) {
 
-        if (currentInput.length() < 8) {
-            currentInput += "8";
-            digitLabel.setText(currentInput);
-            digitGlowLabel.setText(currentInput);
-        }
-
+        appendDigit("8");
         System.out.println("8");
     }
 
     @FXML
     public void nineClicked (ActionEvent event) {
 
-        if (currentInput.length() < 8) {
-            currentInput += "9";
-            digitLabel.setText(currentInput);
-            digitGlowLabel.setText(currentInput);
-        }
-
+        appendDigit("9");
         System.out.println("9");
     }
 
     @FXML
     public void zeroClicked (ActionEvent event) {
 
-        if (currentInput.length() < 8 && currentInput.length() > 0) {
-            currentInput += "0";
-            digitLabel.setText(currentInput);
-            digitGlowLabel.setText(currentInput);
-        }
-
+        appendDigit("0");
         System.out.println("0");
     }
 
     @FXML
     public void plusClicked (ActionEvent event) {
 
-        firstOperand = Double.parseDouble(currentInput);
-        operator = "+";
-        isEnteringSecondOperand = true;
-
-
-        System.out.println("+");
+        addOperator("+");
     }
 
     @FXML
     public void minusClicked (ActionEvent event) {
 
-        System.out.println("-");
+        addOperator("-");
     }
 
     @FXML
     public void multiplyClicked (ActionEvent event) {
 
-        System.out.println("X");
+        addOperator("*");;
     }
 
     @FXML
     public void divideClicked (ActionEvent event) {
 
-        System.out.println("\u00F7");
+        addOperator("/");;
     }
 
     @FXML
     public void equalsClicked (ActionEvent event) {
+
+        if (!isEnteringSecondOperand && !operator.isEmpty()) {
+            double result = calculateResult(firstOperand, currentInput, operator);
+            currentInput = formatResult(result);
+            digitLabel.setText(currentInput);
+            digitGlowLabel.setText(currentInput);
+
+            operator = "";
+            isEnteringSecondOperand = true;
+        }
 
         System.out.println("=");
     }
@@ -240,6 +195,11 @@ public class CalculatorView implements Initializable {
             currentInput += "0.";
             digitLabel.setText(currentInput);
             digitGlowLabel.setText(currentInput);
+            } else if (isEnteringSecondOperand) {
+            currentInput = "0.";
+            digitLabel.setText(currentInput);
+            digitGlowLabel.setText(currentInput);
+            isEnteringSecondOperand = false;
             } else if (currentInput.length() < 8  && !currentInput.contains(".")) {
             currentInput += ".";
             digitLabel.setText(currentInput);
@@ -252,11 +212,23 @@ public class CalculatorView implements Initializable {
     @FXML
     public void acClicked (ActionEvent event) {
 
+        currentInput = "";
+        operator = "";
+        firstOperand = 0;
+        digitLabel.setText(initialDisplay);
+        digitGlowLabel.setText(initialDisplay);
+        isEnteringSecondOperand = false;
+
         System.out.println("AC");
     }
 
     @FXML
     public void cClicked (ActionEvent event) {
+
+        currentInput = "";
+        digitLabel.setText(initialDisplay);
+        digitGlowLabel.setText(initialDisplay);
+
 
         System.out.println("C");
     }
@@ -278,5 +250,66 @@ public class CalculatorView implements Initializable {
 
         System.out.println("%");
 
+    }
+
+    // Helper method for numeric digit logic and behavior when clicked.
+    public void appendDigit (String digit) {
+        if (isEnteringSecondOperand) {
+            currentInput = "";
+            isEnteringSecondOperand = false;
+        }
+
+        if (digitLabel.getText().equals("0.") && currentInput.isEmpty()) {
+            currentInput = "";
+        }
+
+        if (currentInput.length() < 8) {
+            currentInput += digit;
+            digitLabel.setText(currentInput);
+            digitGlowLabel.setText(currentInput);
+        }
+    }
+
+    public void addOperator (String opValue) {
+        if (!operator.isEmpty()) {
+            double result = calculateResult(firstOperand, currentInput, operator);
+            firstOperand = result;
+            currentInput = formatResult(result);
+            digitLabel.setText(currentInput);
+            digitGlowLabel.setText(currentInput);
+        } else {
+            firstOperand = Double.parseDouble(currentInput);
+        }
+
+        operator = opValue;
+        isEnteringSecondOperand = true;
+
+        System.out.println(opValue);
+    }
+
+    public double calculateResult (double leftOperand, String rightOperand, String op) {
+        rightOperand = rightOperand.replace(',', '.');
+        Double right = Double.parseDouble(rightOperand);
+        switch (op.charAt(0)) {
+            case '+':
+                return leftOperand + right;
+            case '-':
+                return leftOperand - right;
+            case '*':
+                return leftOperand * right;
+            case '/':
+                return right != 0 ? leftOperand / right : 0;
+            default:
+                return 0;
+        }
+    }
+
+    // Remove decimal from display if no decimal values
+    private String formatResult (double value) {
+        if (value == (long) value) {
+            return String.valueOf((long) value);
+        } else {
+            return String.format("%.7f", value).replaceAll("0+$", "").replaceAll("\\.$", "");
+        }
     }
 }
