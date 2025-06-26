@@ -10,6 +10,9 @@ import javafx.scene.control.Label;
 import javafx.scene.text.Font;
 
 import java.net.URL;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class CalculatorView implements Initializable {
@@ -67,6 +70,8 @@ public class CalculatorView implements Initializable {
     private String operator = "";    // Holds operator value (+, -, X, / etc.).
     private double firstOperand = 0;   // Create double from first display string.
     private boolean isEnteringSecondOperand = false; // Sets the state for entering second value.
+    private double memoryRecall = 0; // Stores the last result in memory
+    private boolean isNegativeInputPending = false;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -157,6 +162,11 @@ public class CalculatorView implements Initializable {
     @FXML
     public void minusClicked (ActionEvent event) {
 
+        if (currentInput.isEmpty() && operator.isEmpty()) {
+            isNegativeInputPending = true;
+            return;
+        }
+
         addOperator("-");
     }
 
@@ -177,6 +187,7 @@ public class CalculatorView implements Initializable {
 
         if (!isEnteringSecondOperand && !operator.isEmpty()) {
             double result = calculateResult(firstOperand, currentInput, operator);
+            memoryRecall = result;
             currentInput = formatResult(result);
             digitLabel.setText(currentInput);
             digitGlowLabel.setText(currentInput);
@@ -236,11 +247,24 @@ public class CalculatorView implements Initializable {
     @FXML
     public void mrClicked (ActionEvent event) {
 
+        currentInput = formatResult(memoryRecall);
+        digitLabel.setText(currentInput);
+        digitGlowLabel.setText(currentInput);
+        isEnteringSecondOperand = false;
+
+
         System.out.println("MR");
     }
 
     @FXML
     public void squarerootClicked (ActionEvent event) {
+
+        Double result = Double.parseDouble(currentInput);
+        if (result >= 0) {
+            currentInput = formatResult(Math.sqrt(result));
+            digitLabel.setText(currentInput);
+            digitGlowLabel.setText(currentInput);
+        }
 
         System.out.println("\u221A");
     }
@@ -248,12 +272,38 @@ public class CalculatorView implements Initializable {
     @FXML
     public void percentClicked (ActionEvent event) {
 
-        System.out.println("%");
+        if (!operator.isEmpty()) {
+            double result = 0;
+            double a = firstOperand;
+            double b = Double.parseDouble(currentInput);
 
+            switch (operator) {
+                case "+":
+                    result = a / (1 - b/100);
+                    break;
+                case "-":
+                    result = a / (1 + b/100);
+                    break;
+                case "*":
+                    result = a * (b/100);
+                    break;
+                case "/":
+                    result = a / (b/100);
+                    break;
+            }
+
+            currentInput = formatPercentResult(result);
+            System.out.println("Formatted Result: " + currentInput);
+            digitLabel.setText(currentInput);
+            digitGlowLabel.setText(currentInput);
+        }
+
+        System.out.println("%");
     }
 
     // Helper method for numeric digit logic and behavior when clicked.
     public void appendDigit (String digit) {
+
         if (isEnteringSecondOperand) {
             currentInput = "";
             isEnteringSecondOperand = false;
@@ -263,7 +313,7 @@ public class CalculatorView implements Initializable {
             currentInput = "";
         }
 
-        if (currentInput.length() < 8) {
+        if (currentInput.length() < 9) {
             currentInput += digit;
             digitLabel.setText(currentInput);
             digitGlowLabel.setText(currentInput);
@@ -271,6 +321,7 @@ public class CalculatorView implements Initializable {
     }
 
     public void addOperator (String opValue) {
+
         if (!operator.isEmpty()) {
             double result = calculateResult(firstOperand, currentInput, operator);
             firstOperand = result;
@@ -278,7 +329,14 @@ public class CalculatorView implements Initializable {
             digitLabel.setText(currentInput);
             digitGlowLabel.setText(currentInput);
         } else {
-            firstOperand = Double.parseDouble(currentInput);
+            String input = currentInput;
+            if (isNegativeInputPending) {
+                input = "-" + input;
+                isNegativeInputPending = false;
+                digitLabel.setText(input);
+                digitGlowLabel.setText(input);
+            }
+            firstOperand = Double.parseDouble(input);
         }
 
         operator = opValue;
@@ -288,6 +346,7 @@ public class CalculatorView implements Initializable {
     }
 
     public double calculateResult (double leftOperand, String rightOperand, String op) {
+
         rightOperand = rightOperand.replace(',', '.');
         Double right = Double.parseDouble(rightOperand);
         switch (op.charAt(0)) {
@@ -306,10 +365,43 @@ public class CalculatorView implements Initializable {
 
     // Remove decimal from display if no decimal values
     private String formatResult (double value) {
-        if (value == (long) value) {
-            return String.valueOf((long) value);
-        } else {
-            return String.format("%.7f", value).replaceAll("0+$", "").replaceAll("\\.$", "");
+        DecimalFormatSymbols symbols  = new DecimalFormatSymbols(Locale.US);
+        DecimalFormat df = new DecimalFormat("0.########", symbols);
+
+        String formatted = df.format(value);
+        return formatted.replaceAll("0+$", "").replaceAll("\\.$", "");
+
+    }
+
+    // Remove decimal from display if no decimal values when calculating
+    private String formatPercentResult (double value) {
+        // Force a decimal point to be "." instead of ","
+        DecimalFormatSymbols symbols  = new DecimalFormatSymbols(Locale.US);
+        DecimalFormat df = new DecimalFormat("0.########", symbols);
+        // Convert to a normal string
+        String raw = df.format(value);
+
+        if (raw.length() <= 8) {
+            return raw;
         }
+
+        // Trim decimal digits to fit 8 chars
+        if (raw.contains(".")) {
+            int integerLength = raw.indexOf(".");
+            int decimalPlacesAllowed = 8 - integerLength - 1; // Minus 1 for decimal point
+
+            if (decimalPlacesAllowed < 0) {
+                // Not enough space for integer part
+                return raw.substring(0, 8);
+            }
+
+            String format = "%." + decimalPlacesAllowed + "f";
+            raw = String.format(format, value);
+
+            // Deletes trailing zeros / points if present
+            raw = raw.replaceAll("0+$", "").replaceAll("\\.$", "");
+        }
+
+        return raw.length() <= 8 ? raw : raw.substring(0, 8);
     }
 }
