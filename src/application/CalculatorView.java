@@ -320,6 +320,7 @@ public class CalculatorView implements Initializable {
         }
     }
 
+    // Add logic for all operator buttons
     public void addOperator (String opValue) {
 
         if (!operator.isEmpty()) {
