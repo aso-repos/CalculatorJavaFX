@@ -250,7 +250,7 @@ public class CalculatorView implements Initializable {
         currentInput = formatResult(memoryRecall);
         digitLabel.setText(currentInput);
         digitGlowLabel.setText(currentInput);
-        isEnteringSecondOperand = false;
+        isEnteringSecondOperand = true;
 
 
         System.out.println("MR");
@@ -370,8 +370,7 @@ public class CalculatorView implements Initializable {
         DecimalFormat df = new DecimalFormat("0.########", symbols);
 
         String formatted = df.format(value);
-        return formatted.replaceAll("0+$", "").replaceAll("\\.$", "");
-
+        return formatted.contains(".") ? formatted.replaceAll("0+$", "").replaceAll("\\.$", "") : formatted;
     }
 
     // Remove decimal from display if no decimal values when calculating
