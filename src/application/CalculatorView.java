@@ -185,7 +185,7 @@ public class CalculatorView implements Initializable {
     @FXML
     public void equalsClicked (ActionEvent event) {
 
-        if (!isEnteringSecondOperand && !operator.isEmpty()) {
+        if (!currentInput.isEmpty() && !operator.isEmpty()) {
             double result = calculateResult(firstOperand, currentInput, operator);
             memoryRecall = result;
             currentInput = formatResult(result);
