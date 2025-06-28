@@ -314,7 +314,13 @@ public class CalculatorView implements Initializable {
         }
 
         if (currentInput.length() < 9) {
-            currentInput += digit;
+            if (isNegativeInputPending) {
+                currentInput += "-" + digit;
+                isNegativeInputPending = false;
+            } else {
+                currentInput += digit;
+            }
+
             digitLabel.setText(currentInput);
             digitGlowLabel.setText(currentInput);
         }
@@ -324,6 +330,13 @@ public class CalculatorView implements Initializable {
     public void addOperator (String opValue) {
 
         if (!operator.isEmpty()) {
+
+            // Check if currentInput is empty, and set condition for 2nd negative number if empty
+            if (currentInput.isEmpty() || isEnteringSecondOperand) {
+                isNegativeInputPending = true;
+                return;
+            }
+
             double result = calculateResult(firstOperand, currentInput, operator);
             firstOperand = result;
             currentInput = formatResult(result);
