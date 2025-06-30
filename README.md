@@ -2,15 +2,13 @@
 # 🧮 CalculatorJavaFX
 
 A clean, retro-style desktop calculator built using Java and JavaFX, inspired by the Casio Personal M-1 calculator. This project bridges the gap between structured Java coursework and real-world GUI development — applying design, coding, and problem-solving skills into a fully functional, visually polished app.
+- > ⚙️ This project is a faithful digital replica of my original, well-worn Casio M-1 calculator — scratches, dust, and all — rebuilt in JavaFX to preserve its unique character. (Major scratches interfering with the display and logo visibility were removed in Photoshop.)
 
 ## 🎯 Project Overview
 - Transition from academic Java training into desktop GUI development
 - Reinforce object-oriented principles and modular JavaFX design
 - Develop practical GitHub workflow and open-source portfolio experience
 - Showcase a retro calculator with precise UI, custom font, and LED-style glow effects
-
-- > ⚙️ This project is a faithful digital replica of my original, well-worn Casio M-1 calculator — scratches, dust, and all — rebuilt in JavaFX to preserve its unique character. (Major scratches interfering with the display and logo visibility were removed in Photoshop.)
-
 
 ## ⚙️ Key Features
 - ✅ Custom-designed CalculatorDigits.ttf font
