@@ -2,12 +2,14 @@
 
 package application;
 
+import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.text.Font;
+import javafx.util.Duration;
 
 import java.net.URL;
 import java.text.DecimalFormat;
@@ -329,6 +331,8 @@ public class CalculatorView implements Initializable {
     // Add logic for all operator buttons
     public void addOperator (String opValue) {
 
+        dimDigit();
+
         if (!operator.isEmpty()) {
 
             // Check if currentInput is empty, and set condition for 2nd negative number if empty
@@ -379,6 +383,7 @@ public class CalculatorView implements Initializable {
 
     // Remove decimal from display if no decimal values
     private String formatResult (double value) {
+
         DecimalFormatSymbols symbols  = new DecimalFormatSymbols(Locale.US);
         DecimalFormat df = new DecimalFormat("0.########", symbols);
 
@@ -388,6 +393,7 @@ public class CalculatorView implements Initializable {
 
     // Remove decimal from display if no decimal values when calculating
     private String formatPercentResult (double value) {
+
         // Force a decimal point to be "." instead of ","
         DecimalFormatSymbols symbols  = new DecimalFormatSymbols(Locale.US);
         DecimalFormat df = new DecimalFormat("0.########", symbols);
@@ -416,5 +422,21 @@ public class CalculatorView implements Initializable {
         }
 
         return raw.length() <= 8 ? raw : raw.substring(0, 8);
+    }
+
+    // Briefly dim display to simulator operator click
+    public void dimDigit () {
+
+        digitLabel.getStyleClass().add("digit-dim");
+        digitGlowLabel.getStyleClass().add("digit-dim");
+
+        PauseTransition pause = new PauseTransition (Duration.millis(100));
+        pause.setOnFinished(e -> {
+            digitLabel.getStyleClass().remove("digit-dim");
+            digitLabel.getStyleClass().remove("digit-dim");
+
+        });
+
+        pause.play();
     }
 }

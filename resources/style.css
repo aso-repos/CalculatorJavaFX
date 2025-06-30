@@ -48,3 +48,7 @@
     -fx-effect: dropshadow(gaussian, #00000033, 4, 0.1, 0, 1);
     -fx-effect: innershadow(gaussian, #5e6467, 1, 0.1, -1, 1);
     }
+
+.digit-dim {
+    -fx-text-fill: #262d31;
+    }

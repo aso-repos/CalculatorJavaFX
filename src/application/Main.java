@@ -10,6 +10,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -21,6 +22,11 @@ public class Main extends Application {
         Scene scene = new Scene(root);
 
         scene.getStylesheets().add(getClass().getResource("/style.css").toExternalForm());
+
+        Image icon = new Image(getClass().getResourceAsStream("/aso_logo.png"));
+        stage.getIcons().add(icon);
+
+        stage.setResizable(false);
 
         stage.setScene(scene);
         stage.show();
