@@ -1,4 +1,3 @@
-
 # 🧮 CalculatorJavaFX
 
 A clean, retro-style desktop calculator built using Java and JavaFX, inspired by the Casio Personal M-1 calculator. This project bridges the gap between structured Java coursework and real-world GUI development — applying design, coding, and problem-solving skills into a fully functional, visually polished app.
@@ -81,18 +80,18 @@ The calculator window will appear with LED-style display and turquoise digit glo
 .digit-display {
     -fx-font-family: "CalcFont";
     -fx-font-size: 24px;
-    -fx-text-fill: #61faf8; /* Turquoise screenfont color */
+    -fx-text-fill: #61faf8;
 }
 
 .digit-glow {
     -fx-font-family: "CalcFont";
     -fx-font-size: 24px;
-    -fx-text-fill: #61faf8; /* Turquoise screenfont color */
+    -fx-text-fill: #61faf8;
     -fx-effect: dropshadow(gaussian, #e7ffff, 43, 0.03, 0, 0);
 }
 
 .calc-button {
-    -fx-background-color: #d4cec0; /* Button Background color */
+    -fx-background-color: #d4cec0;
     -fx-background-radius: 11px;
 }
 
@@ -131,14 +130,23 @@ The calculator window will appear with LED-style display and turquoise digit glo
 - ✅ Custom font creation and embedding
 - ✅ Digit/decimal alignment and glow overlay
 - ✅ Button placement and PNG font overlays
-- ⬜ Interactive digit button input
-- ⬜ Add arithmetic operations (+, −, ×, ÷)
-- ⬜ Implement clear and backspace functionality
-- ⬜ Add keyboard support and button hover effects
-- ⬜ Integrate scientific and memory functions
+- ✅ Interactive digit button input
+- ✅ Add arithmetic operations (+, −, ×, ÷)
+- ✅ Implement clear and backspace functionality
+- ✅ Add keyboard support and button hover effects
+- ✅ Integrate scientific and memory functions
+
+## 📦 Installer and Release
+
+This project has been exported as a `.jar` and packaged into an installable `.exe` using `jpackage`.  
+The `.exe` is now available under the [GitHub Releases tab](../../releases).
+
+⚠️ **Note:** Some antivirus software (e.g., AVG) may flag the installer during installation. This is expected for unsigned, newly built executables.  
+_It is safe to install._
 
 ## 🎓 Learning Journey
 This project is a culmination of:
+- 📗 The Complete Java Development Bootcamp (Udemy – Learn The Part Inc., Rayan Slim, Jad Slim, Jose Portilla, Pierian Training)
 - 📘 Java Specialization (Duke University / UC San Diego)
 - 🎥 Bro Code’s JavaFX YouTube series
 - 🛠️ Self-taught Git and open-source publishing
