@@ -74,56 +74,18 @@ The calculator window will appear with LED-style display and turquoise digit glo
   → Buttons styled with CSS for bevel and hover behavior  
   → Buttons are functional JavaFX elements, PNGs are for visual authenticity only
 
-## 🧱 Current Display Styling
+## 🎨 Styling and Visual Effects
 
-```css
-.digit-display {
-    -fx-font-family: "CalcFont";
-    -fx-font-size: 24px;
-    -fx-text-fill: #61faf8;
-}
+All visual styling is managed through a dedicated CSS file:  
+📄 `/resources/style.css`
 
-.digit-glow {
-    -fx-font-family: "CalcFont";
-    -fx-font-size: 24px;
-    -fx-text-fill: #61faf8;
-    -fx-effect: dropshadow(gaussian, #e7ffff, 43, 0.03, 0, 0);
-}
+Key highlights:
+- Custom font applied to LED-style display with glow effect
+- Distinct styling for orange, dark, and standard buttons
+- Subtle shadows, bevels, and pressed states for realistic interaction
 
-.calc-button {
-    -fx-background-color: #d4cec0;
-    -fx-background-radius: 11px;
-}
+For full details, see the [style.css file](./resources/style.css)
 
-.calc-button:hover {
-    -fx-background-color: #bab5a8;
-    -fx-effect: dropshadow(gaussian, #00000033, 4, 0.1, 0, 1);
-}
-
-.orange-button {
-    -fx-background-color: #ec7e0f;
-    -fx-background-radius: 7px;
-    -fx-effect: innershadow(gaussian, #ffb771, 2, 0.1, -1, 1);
-}
-
-.orange-button:hover {
-    -fx-background-color: #d97412;
-    -fx-effect: dropshadow(gaussian, #00000033, 4, 0.1, 0, 1);
-    -fx-effect: innershadow(gaussian, #ffb771, 2, 0.1, -1, 1);
-}
-
-.dark-button {
-    -fx-background-color: #252f34;
-    -fx-background-radius: 5px;
-    -fx-effect: innershadow(gaussian, #5e6467, 1, 0.1, -1, 1);
-}
-
-.dark-button:hover {
-    -fx-background-color: #1f2528;
-    -fx-effect: dropshadow(gaussian, #00000033, 4, 0.1, 0, 1);
-    -fx-effect: innershadow(gaussian, #5e6467, 1, 0.1, -1, 1);
-}
-```
 
 ## 🛠️ Development Roadmap
 - ✅ Initial JavaFX calculator frame
