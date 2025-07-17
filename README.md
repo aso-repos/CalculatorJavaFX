@@ -144,6 +144,9 @@ The `.exe` is now available under the [GitHub Releases tab](../../releases).
 ⚠️ **Note:** Some antivirus software (e.g., AVG) may flag the installer during installation. This is expected for unsigned, newly built executables.  
 _It is safe to install._
 
+🟢 **Download the official installer**:  
+➡️ [ASO.Calculator-1.0.exe](https://github.com/aso-repos/CalculatorJavaFX/releases/latest)
+
 ## 🎓 Learning Journey
 This project is a culmination of:
 - 📗 The Complete Java Development Bootcamp (Udemy – Learn The Part Inc., Rayan Slim, Jad Slim, Jose Portilla, Pierian Training)
