@@ -1,4 +1,3 @@
-
 # 🧮 CalculatorJavaFX
 
 A clean, retro-style desktop calculator built using Java and JavaFX, inspired by the Casio Personal M-1 calculator. This project bridges the gap between structured Java coursework and real-world GUI development — applying design, coding, and problem-solving skills into a fully functional, visually polished app.
@@ -75,70 +74,44 @@ The calculator window will appear with LED-style display and turquoise digit glo
   → Buttons styled with CSS for bevel and hover behavior  
   → Buttons are functional JavaFX elements, PNGs are for visual authenticity only
 
-## 🧱 Current Display Styling
+## 🎨 Styling and Visual Effects
 
-```css
-.digit-display {
-    -fx-font-family: "CalcFont";
-    -fx-font-size: 24px;
-    -fx-text-fill: #61faf8; /* Turquoise screenfont color */
-}
+All visual styling is managed through a dedicated CSS file:  
+📄 `/resources/style.css`
 
-.digit-glow {
-    -fx-font-family: "CalcFont";
-    -fx-font-size: 24px;
-    -fx-text-fill: #61faf8; /* Turquoise screenfont color */
-    -fx-effect: dropshadow(gaussian, #e7ffff, 43, 0.03, 0, 0);
-}
+Key highlights:
+- Custom font applied to LED-style display with glow effect
+- Distinct styling for orange, dark, and standard buttons
+- Subtle shadows, bevels, and pressed states for realistic interaction
 
-.calc-button {
-    -fx-background-color: #d4cec0; /* Button Background color */
-    -fx-background-radius: 11px;
-}
+For full details, see the [style.css file](./resources/style.css)
 
-.calc-button:hover {
-    -fx-background-color: #bab5a8;
-    -fx-effect: dropshadow(gaussian, #00000033, 4, 0.1, 0, 1);
-}
-
-.orange-button {
-    -fx-background-color: #ec7e0f;
-    -fx-background-radius: 7px;
-    -fx-effect: innershadow(gaussian, #ffb771, 2, 0.1, -1, 1);
-}
-
-.orange-button:hover {
-    -fx-background-color: #d97412;
-    -fx-effect: dropshadow(gaussian, #00000033, 4, 0.1, 0, 1);
-    -fx-effect: innershadow(gaussian, #ffb771, 2, 0.1, -1, 1);
-}
-
-.dark-button {
-    -fx-background-color: #252f34;
-    -fx-background-radius: 5px;
-    -fx-effect: innershadow(gaussian, #5e6467, 1, 0.1, -1, 1);
-}
-
-.dark-button:hover {
-    -fx-background-color: #1f2528;
-    -fx-effect: dropshadow(gaussian, #00000033, 4, 0.1, 0, 1);
-    -fx-effect: innershadow(gaussian, #5e6467, 1, 0.1, -1, 1);
-}
-```
 
 ## 🛠️ Development Roadmap
 - ✅ Initial JavaFX calculator frame
 - ✅ Custom font creation and embedding
 - ✅ Digit/decimal alignment and glow overlay
 - ✅ Button placement and PNG font overlays
-- ⬜ Interactive digit button input
-- ⬜ Add arithmetic operations (+, −, ×, ÷)
-- ⬜ Implement clear and backspace functionality
-- ⬜ Add keyboard support and button hover effects
-- ⬜ Integrate scientific and memory functions
+- ✅ Interactive digit button input
+- ✅ Add arithmetic operations (+, −, ×, ÷)
+- ✅ Implement clear and backspace functionality
+- ✅ Add keyboard support and button hover effects
+- ✅ Integrate scientific and memory functions
+
+## 📦 Installer and Release
+
+This project has been exported as a `.jar` and packaged into an installable `.exe` using `jpackage`.  
+The `.exe` is now available under the [GitHub Releases tab](../../releases).
+
+⚠️ **Note:** Some antivirus software (e.g., AVG) may flag the installer during installation. This is expected for unsigned, newly built executables.  
+_It is safe to install._
+
+🟢 **Download the official installer**:  
+➡️ [ASO.Calculator-1.0.exe](https://github.com/aso-repos/CalculatorJavaFX/releases/latest)
 
 ## 🎓 Learning Journey
 This project is a culmination of:
+- 📗 The Complete Java Development Bootcamp (Udemy – Learn The Part Inc., Rayan Slim, Jad Slim, Jose Portilla, Pierian Training)
 - 📘 Java Specialization (Duke University / UC San Diego)
 - 🎥 Bro Code’s JavaFX YouTube series
 - 🛠️ Self-taught Git and open-source publishing
