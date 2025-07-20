@@ -64,7 +64,7 @@ The calculator window will appear with LED-style display and turquoise digit glo
 <p align="center">
   <img src="./images/calculator_real.png" alt="Original Casio Calculator Scan" width="45%">
   &nbsp; &nbsp; &nbsp;
-  <img src="./images/calculator_scene_builder.png" alt="Scene Builder Replica" width="45%">
+  <img src="./images/calculator_final.png" alt="Scene Builder Replica" width="45%">
 </p>
 
 **Button Layout Detail**  
